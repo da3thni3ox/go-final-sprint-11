@@ -1,0 +1,19 @@
+name: Go
+on:
+    push:
+        branches: ["*"]
+    pull_request:
+        branches: [ "master" ]
+
+jobs:
+    tests:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Unit Test
+          run: go test -v ./...
+
+    release:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Push docker image
+          run: echo Push to docker image
