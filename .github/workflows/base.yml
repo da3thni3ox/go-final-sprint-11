@@ -1,6 +1,7 @@
 name: Go pipeline
 on:
     push:
+        branches: ["*"]
         tags: ["*"]
     pull_request:
         branches: [ "master" ]
