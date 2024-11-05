@@ -19,6 +19,9 @@ jobs:
         - name: Unit Test
           run: go test -v ./...
 
+        - name: Linters
+          run: go vet ./...
+
     release:
       runs-on: ubuntu-latest
       needs: ["tests"]
